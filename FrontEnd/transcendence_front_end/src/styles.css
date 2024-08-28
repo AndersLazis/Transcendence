@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	/* background-image: url('assets/bg/b5.jpg'); */
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body[data-bs-theme="dark"] {
+    /* background-image: url('assets/idea');  */
+    /* background-image: url('assets/idea/fotor-ai-2024072513341.jpg'); */
+    background-image: url('assets/idea/fotor-ai-20240725132134.jpg');
+    /* background-color: black; */
+}
+
+body[data-bs-theme="light"] {
+    background-image: url('assets/idea/background-1409125_1280.png');
+   
+}
+

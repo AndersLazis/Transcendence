@@ -1,0 +1,91 @@
+
+<!-- To make background plain black 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="background-color: #000; color: #fff;">
+ ---------------------------------->
+
+
+<div class="container game-container py-3">
+	<div class="row mb-3">
+	  <div class="col-12">
+		<h2 class="game-title text-center">{{ 'Pong Battle' | translate }}</h2>
+	  </div>
+	</div>
+	
+	<div class="row mb-3">
+	  <div class="col-5">
+		<div class="card bg-black text-white">
+		  <div class="card-body py-2" style="color: #007bff;">
+			@if (player1_nickname)
+			{
+				<h5 class="card-title mb-0" >{{ player1_nickname | translate }}</h5>
+			}
+			@else 
+			{
+				<h5 class="card-title mb-0">{{ 'Player 1' | translate }}</h5>
+			}
+			<p class="card-text score">{{ remoteGameService.gameState().score1 }}</p>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-2 d-flex align-items-center justify-content-center">
+		<h3 class="text-muted mb-0">{{ 'VS' | translate }}</h3>
+	  </div>
+	  <div class="col-5">
+		<div class="card bg-orange text-white">
+		  <div  style="color: #e05109;" class="card-body py-2">
+			@if (player2_nickname)
+			{
+				<h5 class="card-title mb-0">{{ player2_nickname | translate }}</h5>
+			}
+			@else 
+			{
+				<h5 class="card-title mb-0">{{ 'Player 2' | translate }}</h5>
+			}
+			<p class="card-text score">{{ remoteGameService.gameState().score2 }}</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+	<div class="row">
+	  <div class="col-12 text-center">
+		<button class="btn" (click)="togglePauseResume()">
+		  {{ gameStatusButtonText | translate }}
+		</button>
+	  </div>
+	</div>
+  </div>
+  
+  <div class="game-box">
+	<div id='game' #gameContainer></div>
+  </div>
+  
+  <div class="modal" [ngClass]="{'show': showGameOverModal}">
+	<div class="modal-content">
+	  <h2>{{ 'Game Over!' | translate }}</h2>
+	  <p>{{ gameOverMessage | translate }}</p>
+	  <button class="back-button" (click)="goToHome()">{{ 'Back' | translate }}</button>
+	</div>
+  </div>
+  
+  <!--
+  <button class="btn btn-outline-primary" (click)="startGame()" [disabled]="gameStatus === 'running'">
+	{{ (gameStatus === 'paused' ? 'Resume' : 'Start') | translate }} {{ 'Game' | translate }}
+  </button>
+  <button class="btn btn-outline-warning" (click)="pauseGame()" [disabled]="gameStatus !== 'running'">
+	{{ 'Pause Game' | translate }}
+  </button>
+  -->

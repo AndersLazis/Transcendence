@@ -1,0 +1,183 @@
+{
+    "Home": "Home",
+    "Settings": "Settings",
+    "Private Chat": "Private Chat",
+    "Match": "Match",
+    "Notifications": "Notifications",
+    "No new notifications": "No new notifications",
+    "{{nickname}} sent you a friend request": "{{nickname}} sent you a friend request",
+    "Accept": "Accept",
+    "Reject": "Reject",
+    "Theme": "Theme",
+    "Dark": "Dark",
+    "Light": "Light",
+    "Enable 2FA": "Enable 2FA",
+    "Disable 2FA": "Disable 2FA",
+    "Logout": "Logout",
+    "English": "English",
+    "Deutsch": "Deutsch",
+    "اردو": "اردو",
+    "Русский": "Русский",
+
+    
+    "Welcome to Transcendence": "Welcome to Transcendence",
+    "ID": "ID",
+    "E-mail": "E-mail",
+    "Admin": "Admin",
+    "Is Active": "Is Active",
+    "Action": "Action",
+    "Deactivate": "Deactivate",
+    "Activate": "Activate",
+    "No data": "No data",
+    "Hello": "Hello, ",
+    "New nickname:": "New nickname:",
+    "Avatar:": "Avatar:",
+    "No avatar uploaded": "No avatar uploaded",
+    "Save Changes": "Save Changes",
+
+    "Change email": "Change email",
+    "EMAIL_CHANGED_SUCCESS": "Email changed successfully.",
+    "SOMETHING_WENT_WRONG": "Something went wrong. Please try again later.",
+
+    
+    "User List": "User List",
+    "Unblock": "Unblock",
+    "Delete Friend": "Delete Friend",
+    "Pending": "Pending",
+    "Friend Request": "Friend Request",
+    "Block": "Block",
+    "No User....": "No User....",
+    "Here we can explain the Match history and its profile": "Here we can explain the Match history and its profile",
+    "send message": "send message",
+    "Detail": "Detail",
+
+  
+    "Users": "Users",
+    "Online": "Online",
+    "No User Sorry": "No User Sorry",
+    "Game Invitation": "Game Invitation",
+    "Type a message...": "Type a message...",
+    "Send": "Send",
+
+
+    "Reset password": "Reset password",
+    "Old password": "Old password",
+    "New password": "New password",
+    "Confirm new password": "Confirm new password",
+    "Change password": "Change password",
+    "Required field": "This field is required",
+    "Passwords do not match": "Passwords do not match",
+    "Success": "Password changed successfully.",
+    "Error": "An error occurred. Please try again.",
+      
+    
+    "Inbox": "Inbox",
+    "has joined the chat": "has joined the chat",
+    "Type a message": "Type a message",
+
+
+    "Login": "Login",
+    "Email": "Email",
+    "Password": "Password",
+    "LOGIN": "LOGIN",
+    "Google": "Google",
+    "42 Intra": "42 Intra",
+    "Don't have account?": "Don't have account?",
+    "Signup Now": "Signup Now",
+    "Forgot your password?": "Forgot your password?",
+    "2FA is required. An OTP has been sent to your email. Please enter the OTP:": "2FA is required. An OTP has been sent to your email. Please enter the OTP:",
+    "Enter OTP": "Enter OTP",
+    "Verify OTP": "Verify OTP",
+
+
+    "Page Not Found": "Page Not Found",
+    "Go Home": "Go Home",  
+
+    "Send reset link": "Send reset link",
+    "success": "The reset link has been sent to your email.",
+    "error": "Something went wrong. Please try again later.",
+    
+
+    "Confirm password": "Confirm password",
+    "Reset Password": "Reset Password",
+    "required": "This field is required",
+    "passwordMatchError": "Passwords do not match",
+    "success_pass_reset": "Password reset successfully.",
+
+    "Login with Google": "Login with Google",
+
+
+    "Register": "Register",
+    "Confirm Password": "Confirm Password",
+    "Signup": "Signup",
+    "Already have account?": "Already have account?",
+    "Login?": "Login?",
+    
+    "Deactivate Account": "Deactivate Account",
+    "1v1 Matches": "1v1 Matches",
+    "1v1 matches List": "1v1 matches List",
+    "No Match is available": "No Match is available",
+    "Start Game": "Start Game",
+    "Tournament Matches": "Tournament Matches",
+    "This box is for tournament matches.": "This box is for tournament matches.",
+    "Create Tournament": "Create Tournament",
+    "Maximum Number of Players:": "Maximum Number of Players:",
+    "Min Players : 3 & Max Players : 128": "Min Players : 3 & Max Players : 128",
+    "Create": "Create",
+    "Cancel": "Cancel",
+    "Join Player": "Join Player",
+    "Created By": "Created By",
+    "Max Players": "Max Players",
+    "Winner": "Winner",
+    "Status": "Status",
+    "Not decided": "Not decided",
+    "Start": "Start",
+    "Leave": "Leave",
+    "Join": "Join",
+    "View": "View",
+    "No Tournaments available right now": "No Tournaments available right now",
+    "Join Game": "Join Game",
+    "Decline Game": "Decline Game",
+    "Vs": "Vs",
+    "Pong Battle": "Pong Battle",
+    "Player 1": "Player 1",
+    "Player 2": "Player 2",
+    "VS": "VS",
+    "Game Over!": "Game Over!",
+    "Resume": "Resume",
+    "Game": "Game",
+    "Pause Game": "Pause Game",
+    "Lobby": "Lobby",
+    
+    "Profile": "Profile",
+    "Player Avatar": "Player Avatar",
+    "Tournament History": "Tournament History",
+    "Match History": "Match History",
+    "Date": "Date",
+    "Result": "Result",
+    "Opponent": "Opponent",
+    "Score": "Score",
+    "Match Statistics": "Match Statistics",
+    "Win/Loss": "Win/Loss",
+    "Score update": "Score update",
+    "Performance": "Performance",
+    "No matches found.": "No matches found.",
+    "Winner ID": "Winner ID",
+    "N/A": "N/A",
+    "Not available": "Not available",
+    "No tournaments found.": "No tournaments found."
+      
+      
+    
+    
+    }
+    
+
+
+
+
+
+
+
+  
+  

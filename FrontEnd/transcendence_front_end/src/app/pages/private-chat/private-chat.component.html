@@ -1,0 +1,109 @@
+<div class="container mt-3">
+	<div class="row">
+	  <!-- Users list -->
+	  <div class="col-md-4">
+		<div class="users-list border rounded p-3">
+		  <h5 class="text-center">{{ 'Users' | translate }}</h5>
+		  <ul class="list-group">
+			@for(user of users; track user.id)
+			{
+			  @if (user)
+			  {
+				@if (user.friendship_status != "blocked_by_me" && user.friendship_status != "blocked_by_them")
+				{
+				  <li 
+					class="list-group-item list-group-item-action" 
+					[ngClass]="{'active': user === selected_user}" 
+					(click)="selectUser(user)">
+					<div class="d-flex align-items-center justify-content-between">
+					  <div class="d-flex align-items-center">
+						<img [src]="userService.getAvatarUrl(user)" class="rounded-circle mr-2" style="width: 40px; height: 40px;">
+						<span class="nickname" style="margin-left: 10px;">{{ user.nickname }}</span>
+						@if (user.friendship_status === "friends")
+						{
+						  @if(isUserOnline(user.nickname))
+						  {
+							<span class="ml-2 online-dot" title="{{ 'Online' | translate }}"></span>
+						  }
+						}
+					  </div>
+					  <span 
+						*ngIf="unreadMessages[user.nickname] > 0" 
+						class="badge badge-green">
+						{{ unreadMessages[user.nickname] }}
+					  </span>
+					</div>
+				  </li>
+				}
+			  }
+			
+			@else 
+			{
+			  <li class="list-group-item list-group-item-action">
+				<span>{{ 'No User Sorry' | translate }}</span>
+			  </li>
+			}
+		  }
+		  </ul>
+		</div>
+	  </div>
+	
+	  <!-- Chat window -->
+	  <div class="col-md-8">
+		<div class="chat-container border rounded p-3 d-flex flex-column" style="height: 75vh;">
+		  <div class="chat-header d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+			
+			@if (receiver_data) {
+			  <h5>
+				<a [routerLink]="['/home/user', user_id]">
+				  <img [src]="userService.getAvatarUrl(receiver_data)" class="rounded-circle mr-2" style="width: 40px; height: 40px;">
+				  {{ receiver_data.nickname }}
+				</a>
+			  </h5>
+			  <div class="game-invitation-controls">
+				@if (invitation === 'no invitation') {
+				  <button class="btn btn-outline-info custom-pill" (click)="gameInvite(receiver_data.user_id)">
+					<i class="fas fa-gamepad mr-2"></i>{{ 'Game Invitation' | translate }}
+				  </button>	
+				}
+				@else if (invitation === 'sent') {
+				  <button class="btn btn-outline-secondary custom-pill" disabled>
+					<i class="fas fa-hourglass-half mr-2"></i>Invitation Sent
+				  </button>
+				}
+				@else if (invitation === 'received') {
+				  <div class="btn-group" role="group">
+					<button class="btn btn-outline-success custom-pill mr-2" (click)="responseGameInvite(receiver_data.user_id, 'accept')">
+					  <!-- <i class="fas fa-check mr-2"></i>Accept -->
+					  <small class="d-block">{{ 'Join Game' | translate }}</small>
+					</button>
+					<button class="btn btn-outline-danger custom-pill" (click)="responseGameInvite(receiver_data.user_id, 'decline')">
+					  <!-- <i class="fas fa-times mr-2"></i>Reject -->
+					  <small class="d-block">{{ 'Decline Game' | translate }} </small>
+					</button>
+				  </div>
+				}
+			  </div>
+			}  
+		  </div>
+		  <div class="chat-window flex-grow-1 overflow-auto mb-3">
+			<ul class="list-unstyled">
+			  <li class="mb-3" *ngFor="let message of messages | async">
+				<div class="message" [ngClass]="{'message-right': message.sender === current_user, 'message-left': message.sender !== current_user}">
+				  <div class="message-bubble p-2 rounded">
+					<div class="message-content">{{ message.message }}</div>
+					<span class="timestamp">{{ message.timestamp | date:'shortTime' }}</span>
+				  </div>
+				</div>
+			  </li>
+			</ul>
+		  </div>
+		  <form class="d-flex" *ngIf="receiver_data">
+			<input type="text" class="form-control mr-2" [(ngModel)]="message" name="message" placeholder="{{ 'Type a message...' | translate }}">
+			<button type="button" class="btn btn-info" (click)="sendMessage()">{{ 'Send' | translate }}</button>
+		  </form>
+		</div>
+	  </div>
+	</div>
+  </div>
+  

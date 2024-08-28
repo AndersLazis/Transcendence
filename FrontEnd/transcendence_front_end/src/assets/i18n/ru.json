@@ -1,0 +1,188 @@
+  {
+    "Home": "Главная",
+    "Settings": "Настройки",
+    "Private Chat": "Личный чат",
+    "Match": "Матч",
+    "Notifications": "Уведомления",
+    "No new notifications": "Нет новых уведомлений",
+    "{{nickname}} sent you a friend request": "{{nickname}} отправил вам запрос в друзья",
+    "Accept": "Принять",
+    "Reject": "Отклонить",
+    "Theme": "Тема",
+    "Dark": "Темная",
+    "Light": "Светлая",
+    "Enable 2FA": "Включить двухфакторную аутентификацию",
+    "Disable 2FA": "Отключить двухфакторную аутентификацию",
+    "Logout": "Выйти",
+    "English": "English",
+    "Deutsch": "Deutsch",
+    "اردو": "اردو",
+    "Русский": "Русский",
+
+
+    "Welcome to Transcendence": "Добро пожаловать в Transcendence",
+    "ID": "ID",
+    "E-mail": "E-mail",
+    "Admin": "Админ",
+    "Is Active": "Активен",
+    "Action": "Действие",
+    "Deactivate": "Деактивировать",
+    "Activate": "Активировать",
+    "No data": "Нет данных",
+    "Hello": "Здравствуйте, ",
+    "New nickname:": "Новый никнейм:",
+    "Avatar:": "Аватар:",
+    "No avatar uploaded": "Аватар не загружен",
+    "Save Changes": "Сохранить изменения",
+
+
+    "Change email": "Изменить email",
+    "EMAIL_CHANGED_SUCCESS": "Email успешно изменен.",
+    "SOMETHING_WENT_WRONG": "Что-то пошло не так. Пожалуйста, попробуйте позже.",
+
+    
+    "User List": "Список пользователей",
+    "Unblock": "Разблокировать",
+    "Delete Friend": "Удалить друга",
+    "Pending": "Ожидание",
+    "Friend Request": "Запрос дружбы",
+    "Block": "Заблокировать",
+    "No User....": "Нет пользователей....",
+    "Here we can explain the Match history and its profile": "Здесь мы можем объяснить историю матчей и его профиль",
+    "send message": "отправить сообщение",
+    "Detail": "Детали",
+
+
+    "Users": "Пользователи",
+    "Online": "В сети",
+    "No User Sorry": "Нет пользователей, извините",
+    "Game Invitation": "Приглашение в игру",
+    "Type a message...": "Введите сообщение...",
+    "Send": "Отправить",
+
+    
+    "Reset password": "Сброс пароля",
+    "Old password": "Старый пароль",
+    "New password": "Новый пароль",
+    "Confirm new password": "Подтвердите новый пароль",
+    "Change password": "Сменить пароль",
+    "Required field": "Это поле обязательно для заполнения",
+    "Passwords do not match": "Пароли не совпадают",
+    "Success": "Пароль успешно изменен.",
+    "Error": "Произошла ошибка. Пожалуйста, попробуйте снова.",
+    
+    
+    "Inbox": "Входящие",
+    "has joined the chat": "присоединился к чату",
+    "Type a message": "Введите сообщение",
+
+    
+    "Login": "Вход",
+    "Email": "Электронная почта",
+    "Password": "Пароль",
+    "LOGIN": "ВОЙТИ",
+    "Google": "Google",
+    "42 Intra": "42 Intra",
+    "Don't have account?": "Нет аккаунта?",
+    "Signup Now": "Зарегистрируйтесь сейчас",
+    "Forgot your password?": "Забыли пароль?",
+    "2FA is required. An OTP has been sent to your email. Please enter the OTP:": "Требуется 2FA. Одноразовый пароль был отправлен на вашу электронную почту. Пожалуйста, введите его:",
+    "Enter OTP": "Введите одноразовый пароль",
+    "Verify OTP": "Подтвердить одноразовый пароль",
+
+
+    "Page Not Found": "Страница не найдена",
+    "Go Home": "На главную",
+
+
+    "Send reset link": "Отправить ссылку для сброса",
+    "success": "Ссылка для сброса пароля была отправлена на вашу электронную почту.",
+    "error": "Что-то пошло не так. Пожалуйста, попробуйте еще раз позже.",
+
+
+    "Confirm password": "Подтвердите пароль",
+    "Reset Password": "Сбросить пароль",
+    "required": "Это поле обязательно для заполнения",
+    "passwordMatchError": "Пароли не совпадают",
+    "success_pass_reset": "Пароль успешно сброшен.",
+    
+    "Login with Google": "Войти с Google",
+
+    "Register": "Регистрация",
+    "Confirm Password": "Подтвердите пароль",
+    "Signup": "Зарегистрироваться",
+    "Already have account?": "Уже есть аккаунт?",
+    "Login?": "Войти?" ,
+
+    "Deactivate Account": "Деактивировать аккаунт",    
+    "1v1 Matches": "1-на-1 матчи",
+    "1v1 matches List": "Список матчей 1-на-1",
+    "No Match is available": "Нет доступных матчей",
+    "Start Game": "Начать игру",
+    "Tournament Matches": "Турнирные матчи",
+    "This box is for tournament matches.": "Этот раздел предназначен для турниров.",
+    "Create Tournament": "Создать турнир",
+    "Maximum Number of Players:": "Максимальное количество игроков:",
+    "Min Players : 3 & Max Players : 128": "Мин. игроков: 3 & Макс. игроков: 128",
+    "Create": "Создать",
+    "Cancel": "Отменить",
+    "Join Player": "Игроки",
+    "Created By": "Создано",
+    "Max Players": "Макс. игроков",
+    "Winner": "Победитель",
+    "Status": "Статус",
+    "Not decided": "Не решено",
+    "Start": "Начать",
+    "Leave": "Покинуть",
+    "Join": "Присоединиться",
+    "View": "Просмотр",
+    "No Tournaments available right now": "В данный момент нет доступных турниров",
+    "Join Game": "Присоединиться к игре",
+    "Decline Game": "Отклонить игру",
+    "Vs": "Против",
+    "Pong Battle": "Битва в Понг",
+    "Player 1": "Игрок 1",
+    "Player 2": "Игрок 2",
+    "VS": "Против",
+    "Game Over!": "Игра окончена!",
+    "Resume": "Продолжить",
+    "Game": "Игра",
+    "Pause Game": "Пауза",
+    "Lobby" : "Лобби" ,
+    
+    "Profile": "Профиль",
+    "Player Avatar": "Аватар Игрока",
+    "Tournament History": "История турниров",
+    "Match History": "История матчей",
+    "Date": "Дата",
+    "Result": "Результат",
+    "Opponent": "Противник",
+    "Score": "Счет",
+    "Match Statistics": "Статистика матчей",
+    "Win/Loss": "Победы/Поражения",
+    "Score update": "Обновление счета",
+    "Performance": "Производительность",
+    "No matches found.": "Матчи не найдены.",
+    "Max Players": "Максимум игроков",
+    "Status": "Статус",
+    "Winner ID": "Идентификатор победителя",
+    "Action": "Действие",
+    "N/A": "Н/Д",
+    "View": "Просмотр",
+    "Not available": "Недоступно",
+    "No tournaments found.": "Турниры не найдены."
+    
+    
+    
+  
+    
+
+
+
+  }
+    
+
+
+
+    
+  

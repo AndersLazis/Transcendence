@@ -1,0 +1,47 @@
+<div class="tron-background">
+  <div class="login-container">
+    <h2 class="neon-text">{{ 'Login' | translate }}</h2>
+    <form (ngSubmit)="loginUser()">
+      <div class="input-group">
+        <input type="email" [(ngModel)]="user.email" name="email" required placeholder="{{ 'Email' | translate }}">
+      </div>
+      <div class="input-group">
+        <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="user.password" name="password" required placeholder="{{ 'Password' | translate }}">
+        <span class="password-toggle" (click)="togglePassword()">
+          {{ showPassword ? 'HIDE' : 'SHOW' }}
+        </span>
+      </div>
+      <button type="submit" class="neon-button blue">{{ 'LOGIN' | translate }}</button>
+    </form>
+    <div class="oauth-buttons">
+      <button class="neon-button orange" (click)="loginGoogleOAuth()">
+        <i class="fab fa-google"></i> {{ 'Google' | translate }}
+      </button>
+      <button class="neon-button blue" (click)="loginOAuth()">
+        <i class="fas fa-code"></i> {{ '42 Intra' | translate }}
+      </button>
+    </div>
+    <div class="play-button-container">
+      <a class="neon-button blue play-button" [routerLink]="['/pong-match/local/1']">
+        <i class="fab fa-google"></i> {{ 'Play Game' | translate }}
+      </a>
+    </div>
+    <p class="neon-text">
+      {{ 'Don\'t have account?' | translate }}
+      <a routerLink="/signup">{{ 'Signup Now' | translate }}</a>
+    </p>
+    <p class="neon-text">
+      <a routerLink="/reset-password">{{ 'Forgot your password?' | translate }}</a>
+    </p>
+  </div>
+</div>
+
+
+<div *ngIf="show2fa" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closePopup()">&times;</span>
+    <p>{{ '2FA is required. An OTP has been sent to your email. Please enter the OTP:' | translate }}</p>
+    <input type="text" [(ngModel)]="user.otp" name="otp" [placeholder]="'Enter OTP' | translate">
+    <button (click)="verifyOTP()" class="neon-button blue">{{ 'Verify OTP' | translate }}</button>
+  </div>
+</div>

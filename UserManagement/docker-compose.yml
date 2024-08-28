@@ -1,0 +1,105 @@
+name: user_management
+
+services:
+
+  api_nginx:
+    networks:
+    - user_management
+    build:
+      context: nginx
+      dockerfile: Dockerfile
+    expose:
+      - "443"
+    ports:
+      - "6010:443"
+    volumes:
+      - api-avatars:/app/django_application/avatars
+    secrets:
+      - ssl_cert
+      - ssl_key
+    healthcheck:
+      test: ["CMD", "curl", "-k", "-f", "https://localhost/nginx_status"]
+      interval: 30s
+      start_period: 40s
+      timeout: 5s
+      retries: 3
+    depends_on:
+      api:
+        condition: service_healthy
+
+        
+  api:
+    networks:
+    - user_management
+    build:
+      context: ./api
+      dockerfile: docker/Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    volumes:
+      - api-avatars:/app/django_application/avatars
+      - api-logs:/app/logs
+#- api-data:/app
+    env_file:
+# - ./api/dev.env
+      - ./api/.env
+    expose:
+      - 8000
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import requests; exit(0) if requests.get(\"http://localhost:8000/api/v1/healthcheck/\").ok else exit(1)'"]
+      interval: 30s
+      start_period: 40s
+      timeout: 5s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
+
+  db:
+    networks:
+    - user_management
+    image: postgres:14
+    restart: unless-stopped
+    volumes:
+      - db-data:/var/lib/db
+    env_file:
+#- ./api/dev.env
+      - ./api/.env
+    expose:
+      - 5432
+    healthcheck:
+      test: [ "CMD", "pg_isready", -U, "postgres"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+
+
+volumes:
+  db-data:
+  api-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./api/django_application
+  api-avatars:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./api/django_application/avatars
+  api-logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./api/django_application/logs
+
+networks:
+  user_management:
+    driver: bridge

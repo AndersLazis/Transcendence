@@ -1,0 +1,122 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" [ngClass]="{'scrolled': isScrolled}">
+	<div class="container-fluid">
+	  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+		<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+		  <li class="nav-item">
+			<a class="nav-link" [routerLink]="['/home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ 'Home' | translate }}</a>
+		  </li>
+		  @if (!user_info?.is_superuser)
+		  {
+		  <li class="nav-item">
+			<a class="nav-link" [routerLink]="['/home/Users']" routerLinkActive="active">{{ 'Users' | translate }}</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" [routerLink]="['/home/private_chat']" routerLinkActive="active">{{ 'Private Chat' | translate }}</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" [routerLink]="['/home/lobby']" routerLinkActive="active">{{ 'Lobby' | translate }}</a>
+		  </li>
+			}
+		</ul>
+		
+		<ul class="navbar-nav ms-auto">
+		  <!-- Language Dropdown -->
+		  <li class="nav-item" ngbDropdown>
+			<a class="nav-link" id="languageDropdown" role="button" ngbDropdownToggle>
+			  <img [src]="getLanguageFlag()" class="rounded-circle mr-2" style="width: 20px; height: 20px;">
+			  {{ getCurrentLanguageCode() }}
+			</a>
+			<div ngbDropdownMenu aria-labelledby="languageDropdown" class="dropdown-menu dropdown-menu-end">
+			  <button ngbDropdownItem (click)="useLanguage('en')">
+				<img src="assets/flags/en.png" class="rounded-circle mr-2" style="width: 20px; height: 20px;">
+				{{ 'English' | translate }}
+			  </button>
+			  <button ngbDropdownItem (click)="useLanguage('de')">
+				<img src="assets/flags/de.png" class="rounded-circle mr-2" style="width: 20px; height: 20px;">
+				{{ 'Deutsch' | translate }}
+			  </button>
+			  <button ngbDropdownItem (click)="useLanguage('pk')">
+				<img src="assets/flags/pk.png" class="rounded-circle mr-2" style="width: 20px; height: 20px;">
+				{{ 'اردو' | translate }}
+			  </button>
+			  <button ngbDropdownItem (click)="useLanguage('ru')">
+				<img src="assets/flags/ru.png" class="rounded-circle mr-2" style="width: 20px; height: 20px;">
+				{{ 'Русский' | translate }}
+			  </button>
+			</div>
+		  </li>
+		  <!-- Notification Dropdown -->
+		  <li class="nav-item" ngbDropdown>
+			<a class="nav-link" id="notificationDropdown" role="button" ngbDropdownToggle>
+			  <i class="fas fa-bell"><img src="../../../assets/bell.png" class="rounded-circle mr-2" style="width: 35px; height: 35px;"></i>
+			  <span class="badge bg-danger" *ngIf="user_relationship.length > 0">{{ user_relationship.length }}</span>
+			</a>
+			<div ngbDropdownMenu aria-labelledby="notificationDropdown" class="dropdown-menu dropdown-menu-end">
+			  <h6 class="dropdown-header">{{ 'Notifications' | translate }}</h6>
+			  <div *ngIf="user_relationship.length === 0" class="dropdown-item">{{ 'No new notifications' | translate }}</div>
+			  <ng-container *ngFor="let request of user_relationship">
+				<div class="dropdown-item">
+				  <span>{{ request.nickname }} {{ 'sent you a friend request' | translate }}</span>
+				  <div class="mt-2">
+					<button class="btn btn-sm btn-outline-success me-2" (click)="acceptRequest(request.user_id)">{{ 'Accept' | translate }}</button>
+					<button class="btn btn-sm btn-outline-danger me-2" (click)="rejectRequest(request.user_id)">{{ 'Reject' | translate }}</button>
+				  </div>
+				</div>
+			  </ng-container>
+			</div> 
+		  </li>
+		  <!-- User Dropdown -->
+		  <li class="nav-item" ngbDropdown>
+			<a class="nav-link" id="userDropdown" role="button" ngbDropdownToggle>
+				@if(user_profile?.intra_avatar != null) {
+				  <img [src]="user_profile?.intra_avatar" class="rounded-circle mr-2" style="width: 40px; height: 40px;">
+				} @else { 
+			  <!-- <img src="../../../assets/minion.png" class="rounded-circle mr-2" style="width: 40px; height: 40px;"> -->
+				<img [src]="user_profile?.avatar" class="rounded-circle mr-2" style="width: 40px; height: 40px;">
+				}
+				{{ user_profile?.nickname }}
+			</a>
+			<div ngbDropdownMenu aria-labelledby="userDropdown" class="dropdown-menu dropdown-menu-end">
+			  <div class="dropdown-submenu">
+				<button ngbDropdownItem class="dropdown-toggle">{{ 'Theme' | translate }}</button>
+				<div class="dropdown-menu submenu">
+				  <button ngbDropdownItem (click)="changeTheme('dark')">{{ 'Dark' | translate }}</button>
+				  <button ngbDropdownItem (click)="changeTheme('light')">{{ 'Light' | translate }}</button>
+				</div>
+			  </div>
+			  @if(user_info?.is_intra_user === false)
+			  {
+
+			  
+			  		<div class="dropdown-divider"></div>
+			  		<button ngbDropdownItem [routerLink]="['/home/update-user']">{{ 'Update User' | translate }}</button>
+			  		<div class="dropdown-divider"></div>
+  					<button ngbDropdownItem [routerLink]="['/home/change-email']">{{ 'Change email' | translate }}</button>
+					<div class="dropdown-divider"></div>
+  					<button ngbDropdownItem [routerLink]="['/home/change-password']">{{ 'Change password' | translate }}</button>
+			  <div class="dropdown-divider"></div>
+				@if (userData?.is_2fa_enabled === false)
+				{
+				  <button ngbDropdownItem (click)="FA(true, userData?.id)">{{ 'Enable 2FA' | translate }}</button>
+				}
+				@else
+				{
+				  <button ngbDropdownItem (click)="FA(false, userData?.id)">{{ 'Disable 2FA' | translate }}</button>
+				}
+				}
+			  <div class="dropdown-divider"></div>
+			  <button ngbDropdownItem (click)="logout()">{{ 'Logout' | translate }}</button>
+			</div>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+  
+  <div class="content-wrapper">
+	<router-outlet></router-outlet>
+  </div>
+  

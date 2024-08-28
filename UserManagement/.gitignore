@@ -1,0 +1,15 @@
+# UserManagement
+**/db.sqlite3
+**/__pycache__
+
+# UserProfile
+**/media/*
+
+# migrations
+!**/migrations/__init__.py
+
+# Logs
+**/logs/*
+
+# avatars
+api/django_application/avatars/avatars/*

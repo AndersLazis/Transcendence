@@ -1,0 +1,46 @@
+.chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .chat-panel {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Adjust based on your desired panel width */
+    width: 400px; /* Adjust as needed */
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+  }
+  
+  .chat-panel.open {
+    right: 0;
+  }
+  
+  .chat-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .card-footer {
+    padding: 10px;
+  }
+  
