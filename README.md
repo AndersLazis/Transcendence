@@ -69,20 +69,40 @@ The live chat features:
 
 ## Technologies
 
+Technologies are used:
+
 - Frontend: [Angular 17](https://angular.dev/)
 - Backend: [Django Rest Framework](https://www.django-rest-framework.org/)
 - Database: [Postgresql](https://www.postgresql.org/)
-- Deployment: [docker & docker-compose](https://www.docker.com/)
-- Django Channels 4.1
-- Oauth 2.0
-- Swagger
-
-
-## Mandatory requirements
+- Deployment: [Docker & Docker-Compose](https://www.docker.com/)
+- Web server: [NGINX](https://nginx.org/en/)
+- WebSockets: [Django Channels](https://channels.readthedocs.io/)
+- Authorization: [Oauth 2.0](https://oauth.net/2/)
+- API Documentation [Swagger](https://swagger.io/)
+- Password Hashing [Argon2](https://github.com/P-H-C/phc-winner-argon2)
 
 ## HOW TO RUN
-
-
-
-
+Test server: You can try our project on https://<transcendence.com>/
+Before start, please replace marked variables in .env file in root directory with your own.
+Then, run the following command:
+```
+make
+```
+To access site, go to localhost(by default) with port 4010 or your IP address(if your specified it in .env file):
+```
+https://localhost:4010
+```
+To access admin panel simply login as admin user with DJANGO_SUPERUSER credentials from .env file.
+To access `pgadmin` site, use to 5432 port of localhost (or your IP address if your specified it before):
+```
+https://localhost:5432
+```
+To access API specification, use:
+```
+https://localhost:6010/api/schema/swagger-ui/
+```
+or 
+```
+https://localhost:6010/api/schema/redoc/
+```
 
