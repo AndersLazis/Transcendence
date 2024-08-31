@@ -48,12 +48,13 @@ On this website, users are able to:
 - Block or unblock users,
 - Keep track of their stats, match history and leaderboard ranking,
 - Multiple language support (English, German, Urdu, Russian).
+- manage users accounts via Admin panel
 
 ### Pong Game Features
 
 The game of Pong features:
 
-- Responsive, 1v1, 3D multiplayer game of pong,
+- Responsive, 1v1, 3D online game of pong,
 - Matchmaking system,
 - Ability to invite other players to a game,
 
