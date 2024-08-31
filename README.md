@@ -78,11 +78,13 @@ Technologies are used:
 - Web server: [NGINX](https://nginx.org/en/)
 - WebSockets: [Django Channels](https://channels.readthedocs.io/)
 - Authorization: [Oauth 2.0](https://oauth.net/2/)
-- API Documentation [Swagger](https://swagger.io/)
-- Password Hashing [Argon2](https://github.com/P-H-C/phc-winner-argon2)
+- API Documentation: [Swagger](https://swagger.io/)
+- Password Hashing: [Argon2](https://github.com/P-H-C/phc-winner-argon2)
 
 ## HOW TO RUN
-Test server: You can try our project on https://<transcendence.com>/
+Test server: You can try our project on https://<transcendence.com>
+
+Or run it on your Linux machine:
 Before start, please replace marked variables in .env file in root directory with your own.
 Then, run the following command:
 ```
