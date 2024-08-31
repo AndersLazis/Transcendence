@@ -15,12 +15,67 @@
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## Project
-ft_transcendence is the final project of the 42 school curriculum, challenging students to create a fully-featured web application. This project focuses on building a real-time multiplayer Pong game with additional social features.
+## Code stats : 
 
-## TECH STACK
+- 3 contributors
+- Total 11 702 lines
+  - Typescript : x lines, x%
+  - Python : x lines, x%
+  - CSS : x lines, x%
+  - Shell : x%
+  - Other (dockerfiles, envs, configs...) : x%
+- Git
+  - x branches
+  - x pull requests
+  - x commits
+
+## Project
+
+ft_transcendence is the final project of the 42 school curriculum, challenging students to create a fully-featured web application. This project focuses on building a single-page application which includes a real-time multiplayer game of pong and a live chat.
 
 ## Features
+
+### User Management Features:
+
+On this website, users are able to:
+
+- Sign up and login using their credentials,
+- Sign up or login via the School 42 or Google OAuth API,
+- Enable or disable 2FA,
+- Customize their profile with a unique username and avatar,
+- Change color theme,
+- Add and remove friends,
+- Block or unblock users,
+- Keep track of their stats, match history and leaderboard ranking,
+- Multiple language support (English, German, Urdu, Russian).
+
+### Pong Game Features
+
+The game of Pong features:
+
+- Responsive, 1v1, 3D multiplayer game of pong,
+- Matchmaking system,
+- Ability to invite other players to a game,
+
+### Chat Features
+
+The live chat features:
+
+- Creation of private chats, as well as direct messages between two users,
+- Ability to block individual users so as not to see messages from blocked accounts,
+- Ability for chat room creators to manage their chat rooms:
+- Context menu enabling users to challenge others to a game of pong.
+
+## Technologies
+
+- Frontend: [Angular 17](https://angular.dev/)
+- Backend: [Django Rest Framework](https://www.django-rest-framework.org/)
+- Database: [Postgresql](https://www.postgresql.org/)
+- Deployment: [docker & docker-compose](https://www.docker.com/)
+- Django Channels 4.1
+- Oauth 2.0
+- Swagger
+
 
 ## Mandatory requirements
 
