@@ -1,13 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Commits][commits-shield]][commits-url]
-[![Pull Requests][pr-closed-shield]][pr-closed-url]
-![Project passed][project-shield]
-
-
-
-
-
-
 ## Developed by :
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -24,3 +14,18 @@
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## Overview
+
+## TECH STACK
+
+## Features
+
+## Mandatory requirements
+
+## HOW TO RUN
+
+
+
+
+
