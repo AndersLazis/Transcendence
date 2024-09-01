@@ -3,3 +3,12 @@ nixPkgs = ['make']
 
 [start]
 cmd = "make"
+
+[build]
+builder = "ubuntu"
+
+[phases.setup]
+nixPkgs = ['make']
+
+[start]
+cmd = "make"
