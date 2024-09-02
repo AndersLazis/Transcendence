@@ -62,9 +62,8 @@ The game of Pong features:
 
 The live chat features:
 
-- Creation of private chats, as well as direct messages between two users,
+- Creation of private chats between two users,
 - Ability to block individual users so as not to see messages from blocked accounts,
-- Ability for chat room creators to manage their chat rooms:
 - Context menu enabling users to challenge others to a game of pong.
 
 ## Technologies
