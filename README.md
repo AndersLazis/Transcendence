@@ -27,20 +27,6 @@
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## Code stats : 
-
-- 3 contributors
-- Total 11 702 lines
-  - Typescript : x lines, x%
-  - Python : x lines, x%
-  - CSS : x lines, x%
-  - Shell : x%
-  - Other (dockerfiles, envs, configs...) : x%
-- Git
-  - x branches
-  - x pull requests
-  - x commits
-
 ## Project
 
 ft_transcendence is the final project of the 42 school curriculum, challenging students to create a fully-featured web application. This project focuses on building a single-page application which includes a real-time multiplayer game of pong and a live chat.
