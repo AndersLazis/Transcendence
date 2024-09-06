@@ -31,6 +31,7 @@
 
 ft_transcendence is the final project of the 42 school curriculum, challenging students to create a fully-featured web application. This project focuses on building a single-page application which includes a real-time multiplayer game of pong and a live chat.
 
+Please, press on a video below to see how it wokrs:
 
 [![Transcendence](https://img.youtube.com/vi/cBUYcv9EFZ4/0.jpg)](https://youtu.be/cBUYcv9EFZ4?feature=shared)
 
