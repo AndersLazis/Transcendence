@@ -33,8 +33,7 @@ ft_transcendence is the final project of the 42 school curriculum, challenging s
 
 Please, press on a video below to see how it wokrs:
 
-[![Transcendence](https://img.youtube.com/vi/cBUYcv9EFZ4/0.jpg)](https://www.youtube.com/watch?v=cBUYcv9EFZ4)
-
+https://github.com/user-attachments/assets/4f538807-2aae-4857-9c23-e2599c0cf7db
 
 
 ## Features
@@ -42,6 +41,9 @@ Please, press on a video below to see how it wokrs:
 ### User Management Features:
 
 On this website, users are able to:
+
+
+
 
 - Sign up and login using their credentials,
 - Sign up or login via the School 42 or Google OAuth API,
