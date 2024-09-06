@@ -33,7 +33,9 @@ ft_transcendence is the final project of the 42 school curriculum, challenging s
 
 Please, press on a video below to see how it wokrs:
 
-[![Transcendence](https://img.youtube.com/vi/cBUYcv9EFZ4/0.jpg)](https://youtu.be/cBUYcv9EFZ4?feature=shared)
+[![Transcendence](https://img.youtube.com/vi/cBUYcv9EFZ4/0.jpg)](https://www.youtube.com/watch?v=cBUYcv9EFZ4)
+
+
 
 ## Features
 
